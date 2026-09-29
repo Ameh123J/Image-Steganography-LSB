@@ -46,17 +46,6 @@ The `images/` directory contains the images used by the steganography experiment
 - `binary2.jpg` – binary image
 - `binary3.jpg` – binary image
 
-## Repository Structure
-
-Image-Steganography-LSB/
-├── images/
-│   ├── binary1.jpg
-│   ├── binary2.jpg
-│   ├── binary3.jpg
-│   ├── grayscale.jpg
-│   └── rgb.jpg
-├── project.ipynb
-└── README.md
 
 ## Implementation
 

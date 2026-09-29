@@ -1,18 +1,68 @@
-# Image-Steganography-LSB# Image Steganography using LSB
+# Image Steganography using LSB
 
-Image steganography project implementing Least Significant Bit (LSB)
-techniques for hiding and retrieving data in grayscale and RGB images.
+This project demonstrates image steganography using Least Significant Bit (LSB) techniques for hiding and retrieving information in integers, grayscale images, and RGB images.
 
-## Project Overview
+The program provides a menu-driven interface that allows the user to select different steganography operations. The project explores how information can be embedded into the least significant bits of digital data while preserving the main visual appearance of the cover image.
 
-## Methods
+## Project Features
 
-## Grayscale Image Steganography
+The program implements six steganography operations:
 
-## RGB Image Steganography
+1. **Hide a Boolean value inside an integer**
+   - A Boolean value (`True` or `False`) is stored by modifying the least significant bit of an integer.
 
-## Example Results
+2. **Retrieve a Boolean value from an integer**
+   - The hidden Boolean value is recovered by reading the least significant bit.
 
-## Technologies Used
+3. **Hide and retrieve a binary image inside a grayscale image**
+   - `grayscale.jpg` is used as the cover image.
+   - `binary1.jpg` is embedded into the grayscale image using LSB modification.
+   - The hidden binary image can then be extracted from the resulting image.
+
+4. **Hide and retrieve three binary images inside an RGB image**
+   - `rgb.jpg` is used as the cover image.
+   - `binary1.jpg` is hidden in the Red channel.
+   - `binary2.jpg` is hidden in the Green channel.
+   - `binary3.jpg` is hidden in the Blue channel.
+   - Each binary image is embedded into the least significant bit of its corresponding RGB channel.
+
+5. **Hide and retrieve a grayscale image inside an RGB image**
+   - `rgb.jpg` is used as the cover image.
+   - `grayscale.jpg` is hidden across the RGB channels.
+   - The grayscale image is then retrieved and displayed to verify the embedding and extraction process.
+
+6. **Hide multiple bits of data per pixel**
+   - The user selects the number of bits (`n`) to hide.
+   - Binary data is provided as an integer.
+   - The least significant `n` bits of each grayscale pixel are replaced with the provided data.
+
+## Images Used
+
+The `images/` directory contains the images used by the steganography experiments:
+
+- `grayscale.jpg` – grayscale cover image
+- `rgb.jpg` – RGB cover image
+- `binary1.jpg` – binary image
+- `binary2.jpg` – binary image
+- `binary3.jpg` – binary image
 
 ## Repository Structure
+
+Image-Steganography-LSB/
+├── images/
+│   ├── binary1.jpg
+│   ├── binary2.jpg
+│   ├── binary3.jpg
+│   ├── grayscale.jpg
+│   └── rgb.jpg
+├── project.ipynb
+└── README.md
+
+## Implementation
+
+The implementation is provided in `project.ipynb`. The notebook contains the functions for embedding and retrieving information using LSB-based steganography techniques.
+
+## Authors
+
+Mahmoud Tantawy  
+James Adah
